@@ -1,0 +1,14 @@
+.show-books>main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+.search{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+    padding: 5px;
+}

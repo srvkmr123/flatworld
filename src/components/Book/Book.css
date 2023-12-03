@@ -1,0 +1,21 @@
+.book{
+    border: 1px solid black;
+    width: max-content;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.info{
+    margin-bottom: 10px;
+}
+.info>label{
+    display: block;
+   margin-bottom:px;
+}
+
+.ops{
+    display: flex;
+    justify-content: space-around;
+}
+.ops>span{
+    cursor: pointer;
+}

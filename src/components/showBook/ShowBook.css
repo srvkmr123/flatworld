@@ -1,0 +1,9 @@
+.show-book{
+    height: max-content;
+    width: 80vh;
+    border-radius: 10px;
+    margin: 20px auto;
+    font-size: 2em;
+    padding: 10px;
+    border: 1px solid gray;
+}
