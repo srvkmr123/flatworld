@@ -8,7 +8,7 @@ const location=useLocation()
 const [qr, setQr] = useState("");
  
 useEffect(()=>{
-    generateQrCode(location.pathname)
+    generateQrCode(window.location.href)
 },[location])
 
 const generateQrCode=(url)=>{

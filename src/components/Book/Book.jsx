@@ -41,9 +41,9 @@ const handleChange=(e)=>{
   }
 
   return (
-    <div className="book" onClick={()=>navigate('/show-book',{state:{isbn:book.isbnNo}})} >
+    <div className="book"  >
   <div className="card-body ">
-    <h2 className="card-title">{book.bookName}</h2>
+    <h2 className="card-title" onClick={()=>navigate('/show-book',{state:{isbn:book.isbnNo}})}>{book.bookName}</h2>
     <p className="mb-2 ">ISBN: {book.isbnNo}</p>
     {/* <p className="mb-2 ">Category: {book.cat}</p> */}
     <div className='info'>
@@ -71,7 +71,7 @@ const handleChange=(e)=>{
       <input type="text" name="avail" id="avail" value={data.availability} readOnly={edit?false:true} onChange={handleChange}/>
     </div>
     </div>
-    <div className="ops">
+    <div className="ops" onClick={(e)=>e.stopPropagation()}>
       {edit?<span className='text-success' onClick={handleSave}>Save</span>:<span className='text-primary' onClick={handleEdit}>Edit</span>}
       <span className='text-danger' onClick={handleRemove}>Remove</span>
     </div>

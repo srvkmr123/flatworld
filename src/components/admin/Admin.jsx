@@ -21,6 +21,7 @@ console.log(id)
 
   
  const [error,setError]=useState(false)
+ const [success,setSuccess]=useState(false)
 
   const handleChange=(e)=>{
    const name= e.target.name 
@@ -57,6 +58,8 @@ console.log(id)
             _id:''
       }
      )
+    setSuccess(true)
+    setTimeout(()=>setSuccess(false),1000)
   }
 
 
@@ -65,6 +68,7 @@ console.log(id)
       <h1 className='text-center'>Admin page</h1>
       <h4 className='text-muted text-center'>Add books to the shelf...</h4>
       {error && <p className='text-center text-danger'>All values required...</p>}
+      {success && <p className='text-center text-success'>Book Added !!</p>}
       <form className='admin-form' >
   <div className="form-group " >
     <label htmlFor="book-name">Enter Book Name:</label>
